@@ -1,0 +1,10 @@
+@mixin md-tab-nav-style {
+    text-decoration:none;
+    background-color: purple;
+    color: white;
+}
+
+md-tab-link{
+    @include md-tab-nav-style();
+    flex: auto;
+}

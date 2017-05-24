@@ -1,0 +1,23 @@
+<div *ngIf="users;else noUsers">
+  <div class="row">
+    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+      <md-list  style="height:550px;overflow-x:hidden;overflow-y:auto;">
+        <h2 md-header>Users</h2>
+        <md-list-item  *ngFor="let user of users" [class.selected]="user===selectedUser" (click)="selectUser(user)">
+          <p md-line>
+            <span>{{ user.name.first }} {{ user.name.last }}</span>
+          </p>
+        </md-list-item>
+      </md-list>
+    </div>
+    <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+      <div *ngIf="selectedUser">
+        <naga-user-detail [user]="selectedUser"></naga-user-detail>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #noUsers>
+  <md-progress-bar class="progress" color="accent" mode="indeterminate"></md-progress-bar>
+</ng-template>

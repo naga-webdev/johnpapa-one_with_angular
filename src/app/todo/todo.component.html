@@ -1,0 +1,10 @@
+<h1>Check all todos here</h1>
+<nav md-tab-nav-bar>
+    <a md-tab-link 
+       *ngFor="let tabLink of tabLinks"
+       [routerLink]="tabLink.tabLink"
+       routerLinkActive #rlaRef="routerLinkActive">
+        {{ tabLink.tabShowLink }}
+    </a>
+</nav>
+<router-outlet></router-outlet>

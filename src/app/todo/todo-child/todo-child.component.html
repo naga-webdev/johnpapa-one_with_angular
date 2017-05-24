@@ -1,0 +1,14 @@
+<div *ngIf="todos;else noTodos">
+    <h4>Todo - todos</h4>
+    <md-divider>
+        <md-list dense>
+            <md-list-item *ngFor="let todo of todos">
+                {{todo.text}}
+            </md-list-item>
+        </md-list>
+    </md-divider>
+</div>
+
+<ng-template #noTodos>
+    <md-progress-bar class="progress" color="accent" mode="indeterminate"></md-progress-bar>
+</ng-template>

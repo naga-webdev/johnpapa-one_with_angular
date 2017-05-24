@@ -1,0 +1,9 @@
+{   
+    "todos":[
+        {"text":"Upload to github","status":"todo"},
+        {"text":"Text areas should expand to fit their contents (no scroll bar)","status":"inprogress"},
+        {"text":"Task deleition","status":"inprogress"},
+        {"text":"Sub-tasks","status":"done"},
+        {"text":"Better styles for the Project Title","status":"todo"}
+    ]
+}

@@ -1,0 +1,13 @@
+@mixin hoverSelected{
+  cursor: pointer;
+  background-color: palevioletred;
+  color: white;
+}
+
+md-list md-list-item:hover {
+  @include hoverSelected()
+}
+
+md-list md-list-item.selected{
+   @include hoverSelected()
+}
